@@ -26,10 +26,8 @@ namespace Service
                 case "/":
                     if (request.Y != 0)
                     {
-                        result = (long)request.X / request.Y;
+                        result = request.X / request.Y;
                     }
-                    break;
-                default:
                     break;
             }
             return Task.FromResult(new CalculateReply { Result = result });
